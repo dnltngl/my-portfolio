@@ -1,0 +1,38 @@
+<div class="bg-img">
+ 
+  <nav>
+        <button class="hamburger" mat-icon-button aria-label="hamburger menu" (click)="toggleSidenav()">
+          <mat-icon>menu</mat-icon>
+      </button>
+    <ul class="primary-navigation" [ngClass]="{'nav--open': isSidenavOpen}">
+      <li class="mylogo">
+        <img src="/assets/img/mylogo.png">
+        <span>TNGL</span>
+      </li>
+      <li (click)= "goToRoute('',0)">Home</li>
+      <li (click)= "goToRoute('about',900)">About </li>
+      <li (click)= "goToRoute('skills',900)">Skills </li>
+      <li (click)= "goToRoute('projects',900)">Projects </li>
+      <li (click)= "goToRoute('contacts',900)">Contacts </li>
+      <li><button class="hamburger" mat-icon-button aria-label="hamburger menu" (click)="toggleSidenav()">
+          <mat-icon>close</mat-icon>
+      </button></li>
+    
+    </ul>
+   
+  </nav>
+
+     <section class="hero__container">
+            <p class="intro">Hello my name is</p>
+                <h1 class="name">Daniel Joshua Tongol</h1>
+                <p class="position" >I am a Web Developer</p>
+                <button mat-button (click)="openDialog()">Hire Me</button>
+      </section>
+</div>
+
+  <main class="hero">
+      <router-outlet></router-outlet>
+  </main> 
+<app-footer></app-footer>
+      
+    

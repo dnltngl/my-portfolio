@@ -1,0 +1,117 @@
+.bg-img {
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/assets/img/bg-homepage_n.jpg);
+  color: var(--clr-100);
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.primary-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(133, 126, 126, 0.7));
+}
+.primary-navigation > :not(li:first-child) {
+  font-size: 1.1rem;
+  color: rgb(245, 236, 236);
+}
+.primary-navigation > li:hover {
+  color: #c43921;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.primary-navigation > li {
+  color: #c43921;
+}
+
+.mylogo {
+  display: flex;
+  align-items: center;
+}
+.mylogo img {
+  aspect-ratio: 1;
+  max-width: 5rem;
+}
+.mylogo span {
+  font-size: 2rem;
+}
+.hero__container {
+  display: grid;
+  gap: 1rem;
+  line-height: 1;
+  text-align: center;
+}
+.intro,
+.position {
+  font-size: 2rem;
+  color: white;
+}
+.name {
+  font-size: 2.5rem;
+  color: white;
+}
+button {
+  justify-self: start;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+.hamburger {
+  display: none;
+}
+.nav--open {
+
+  transition: all 500ms ease-in-out;
+  transform: translateY(0) !important;
+    transform: translateY(0);
+
+}
+@media (width < 700px) {
+  .hamburger {
+    display: unset;
+    
+  }
+  nav {
+    position:fixed;
+    z-index: 99999;
+  }
+  .primary-navigation {
+    background-color: #c43921;
+    display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+    flex-direction: column;
+    transform: translateY(-200%);
+    
+  }
+}
