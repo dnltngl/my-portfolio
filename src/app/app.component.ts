@@ -18,12 +18,18 @@ export class AppComponent {
       top: scrollY,
       behavior: 'smooth',
     });
+    
   }
   openDialog() {
   this.dialog.open(ContactsComponent);
   }
    toggleSidenav() {
     this.isSidenavOpen = !this.isSidenavOpen;
+
+  }
+  openForm() {
+    const link = 'https://formsubmit.co/el/welunu';
+    window.open(link);
   }
 }
 
