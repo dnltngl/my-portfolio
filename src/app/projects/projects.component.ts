@@ -7,7 +7,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent  implements OnInit, AfterViewInit{
  ngOnInit() {
-    AOS.init({once:true});
+    AOS.init({});
   }
   ngAfterViewInit() {
     AOS.refresh();

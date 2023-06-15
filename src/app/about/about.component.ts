@@ -9,7 +9,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit, AfterViewInit {
   ngOnInit() {
-    AOS.init({once:true});
+    AOS.init({});
   }
   ngAfterViewInit() {
     AOS.refresh();

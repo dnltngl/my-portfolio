@@ -32,7 +32,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     window.open(link);
   }
   ngOnInit() {
-    AOS.init({once:true});
+    AOS.init({});
   }
   ngAfterViewInit() {
     AOS.refresh();
